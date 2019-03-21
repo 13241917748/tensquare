@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tensquare-base</artifactId>
+    <description>基础模块</description>
 
     <dependencies>
 
