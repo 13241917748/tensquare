@@ -13,6 +13,8 @@ import javax.persistence.criteria.Root;
 import javax.persistence.criteria.Selection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -77,6 +79,7 @@ public class GatheringService {
 	 * @param id
 	 * @return
 	 */
+	@Cacheable(value="gathering",key="#id")
 	public Gathering findById(String id) {
 		return gatheringDao.findById(id).get();
 	}
@@ -94,6 +97,7 @@ public class GatheringService {
 	 * 修改
 	 * @param gathering
 	 */
+	@CacheEvict(value="gathering",key="#gathering.id")
 	public void update(Gathering gathering) {
 		gatheringDao.save(gathering);
 	}
@@ -102,6 +106,7 @@ public class GatheringService {
 	 * 删除
 	 * @param id
 	 */
+	@CacheEvict(value="gathering",key="#id")
 	public void deleteById(String id) {
 		gatheringDao.deleteById(id);
 	}
