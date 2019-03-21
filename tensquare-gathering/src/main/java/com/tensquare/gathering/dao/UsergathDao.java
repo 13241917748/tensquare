@@ -1,6 +1,5 @@
 package com.tensquare.gathering.dao;
 
-import com.tensquare.gathering.pojo.Gathering;
 import com.tensquare.gathering.pojo.Usergath;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

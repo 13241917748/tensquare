@@ -11,7 +11,7 @@ import java.util.Date;
  * @author Administrator
  */
 @Entity
-@Table(name = "tb_gathering")
+@Table(name = "tb_usergath")
 public class Usergath {
 
     /**
@@ -29,5 +29,27 @@ public class Usergath {
      */
     private Date exetime;
 
+    public String getUserid() {
+        return userid;
+    }
 
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getGathid() {
+        return gathid;
+    }
+
+    public void setGathid(String gathid) {
+        this.gathid = gathid;
+    }
+
+    public Date getExetime() {
+        return exetime;
+    }
+
+    public void setExetime(Date exetime) {
+        this.exetime = exetime;
+    }
 }
