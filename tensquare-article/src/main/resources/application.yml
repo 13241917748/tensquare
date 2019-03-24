@@ -13,3 +13,8 @@ spring:
     show-sql: true
   redis:
     host: 127.0.0.1
+
+  data:
+    mongodb:
+      host: 127.0.0.1
+      database: recruitdb
