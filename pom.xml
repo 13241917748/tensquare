@@ -10,6 +10,7 @@
         <module>tensquare-article</module>
         <module>mongo-demo</module>
         <module>tensquare-spit</module>
+        <module>tensquare-search</module>
     </modules>
 
     <parent>
